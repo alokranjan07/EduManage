@@ -25,3 +25,59 @@ Class Management for assigning teachers and students
 Attendance Tracking with date-wise records
 
 Pagination & Search to efficiently handle large datasets
+
+
+#system architecture
+
+
+This project follows a three-tier architecture to ensure scalability, security, and maintainability.
+Frontend — React.js
+Built using React.js as a single-page application (SPA)
+
+Handles user interface, client-side routing, and state management
+
+Communicates with the backend via RESTful APIs
+
+Uses Axios  for HTTP requests
+
+Consumes and renders JSON responses
+
+
+
+2. backend Django (REST Framework)
+Developed using Django with Django REST Framework (DRF)
+
+Manages business logic and API handling
+
+Implements authentication and authorization
+
+Uses serializers for data validation and transformation
+
+Exposes RESTful endpoints for frontend consumption
+
+
+3.database -SQL
+Uses a relational SQL database ( SQLite)
+
+Stores structured and relational application data
+
+Ensures data integrity through constraints and indexing
+
+Integrated with Django using Django ORM
+
+
+Request Flow
+User interacts with the React frontend
+
+React sends an HTTP request to the Django REST API
+
+Django processes the request and queries the SQL database
+
+Database returns the data to Django
+
+Django sends a JSON response back to React
+
+React updates the UI dynamically
+
+
+
